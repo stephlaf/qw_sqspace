@@ -1,3 +1,5 @@
-console.log('bizoune');
-const louisDisplay = document.getElementById('yui_3_17_2_1_1551896194504_809');
-louisDisplay.hidden = true;
+var mainPage = document.querySelector('.Main.Main--page');
+
+var louis = document.querySelector('.Main.Main--page').childNodes[1].firstElementChild.textContent;
+
+if (louis.includes("LOUIS-ALEXANDRE")) {mainPage.hidden = true};
