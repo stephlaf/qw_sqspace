@@ -14,7 +14,7 @@ var renameBtns = () => {
   var moreShowsBtn = document.querySelectorAll('.sqs-block-button-element--small.sqs-block-button-element')[1];
 
   moreShowsBtn.text = "Plus de Spectacles";
-  
+
   billetsBtns.forEach((button, i) => { 
     if (i%2 === 0) {
       button.text = 'billets';
@@ -22,8 +22,22 @@ var renameBtns = () => {
       button.text = 'rsvp';
     }
   });
-  unScroll();
+  dateFormat();
 };
+
+
+var dateFormat = () => {
+  var options = { weekday: 'short', month: 'short', day: 'numeric' };
+  var dateFields = document.querySelectorAll('.sqs-tourdates__timeframe');
+
+  dateFields.forEach((field) => {
+    var dateString = field.dataset["tourDatetime"];
+    var dateFrStr = new Date(dateString);
+    frenchDate = dateFrStr.toLocaleDateString("fr", options).toUpperCase();
+    field.innerText = frenchDate.split('.').join('');
+  });
+  unScroll();
+}
 
 var scroll = () => { window.addEventListener('scroll', renameBtns) };
 var unScroll = () => { window.removeEventListener('scroll', renameBtns) };
