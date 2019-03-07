@@ -11,9 +11,9 @@ if (mainPage !== null) {
 
 var renameBtns = () => {
   var billetsBtns = document.querySelectorAll('.sqs-tourdates__button');
-  var moreShowsBtn = document.querySelectorAll('.sqs-block-button-element--small.sqs-block-button-element')[1];
+  // var moreShowsBtn = document.querySelectorAll('.sqs-block-button-element--small.sqs-block-button-element')[1];
 
-  moreShowsBtn.text = "Plus de Spectacles";
+  // moreShowsBtn.text = "Plus de Spectacles";
 
   billetsBtns.forEach((button, i) => { 
     if (i%2 === 0) {
