@@ -1,4 +1,8 @@
-// // Remove Louis from bottom of profile pages
+// Hide English Link in nav menu
+
+document.querySelector('.Header-nav-folder-title').text = '';
+
+// Remove Louis from bottom of profile pages
 
 var mainPage = document.querySelector('.Main.Main--page');
 
@@ -43,3 +47,6 @@ var scroll = () => { window.addEventListener('scroll', renameBtns) };
 var unScroll = () => { window.removeEventListener('scroll', renameBtns) };
 
 document.addEventListener("DOMContentLoaded", scroll);
+
+// <i class="fab fa-twitter"></i>
+// <i class="fab fa-instagram"></i>
