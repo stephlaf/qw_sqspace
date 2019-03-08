@@ -80,10 +80,8 @@ var cartNameTranslate = () => {
       
       var emptyMessage = document.querySelector('[data-test="empty-message"]');
       emptyMessage.children[0].innerText = 'Votre panier est vide. ';
-    }
-    
+    } 
   }
-
 };
 
 document.addEventListener("DOMContentLoaded", cartNameTranslate);
