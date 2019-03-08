@@ -74,6 +74,10 @@ var cartNameTranslate = () => {
     var shoppingLink = document.querySelector('[data-test="continue-shopping-link"]');
     var shopUrl = 'https://philippe-courchesneleboeuf.squarespace.com/boutique';
     shoppingLink.setAttribute('href', shopUrl);
+    shoppingLink.innerText = 'Continuez à magasiner';
+    
+    var emptyMessage = document.querySelector('[data-test="empty-message"]');
+    emptyMessage.children[0].innerText = 'Votre panier est vide. ';
   }
 
 };
