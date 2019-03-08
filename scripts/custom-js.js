@@ -48,7 +48,18 @@ var unScroll = () => { window.removeEventListener('scroll', renameBtns) };
 
 document.addEventListener("DOMContentLoaded", scroll);
 
-// Hide products section in product show page if less than 2 products available
+// Hide products section in Boutique page if less than 2 products available
 
-var availableProds = document.querySelector('.ProductList-grid.clear');
-if (availableProds.childNodes.length < 4) { availableProds.hidden = true };
+var cond1 = location.pathname.split('/')[1] === 'boutique';
+var cond2 = location.pathname.split('/').length === 2;
+if (cond1 && cond2) {
+  var availableProds = document.querySelector('.ProductList-grid.clear');
+  if (availableProds.childNodes.length < 4) { availableProds.hidden = true };
+}
+
+// Change Quantity label on product show page to Quantité
+
+if (location.pathname.split('/')[1] === 'boutique') {
+  var quantityLabel = document.querySelector('.quantity-label');
+  quantityLabel.innerText = 'Quantité :';
+}
