@@ -66,15 +66,19 @@ if (location.pathname.split('/')[1] === 'boutique') {
 
 // Translate Empty Shopping cart message
 
-if (location.pathname === "/cart") {
-  // document.querySelector('.CartHeader-cartTitle-9Dk3d.cart-title').innerText = "Panier d'achats";
-  console.log('cartHeader');
-  var cartHeader = document.querySelector('.CartHeader-cartTitle-9Dk3d.cart-title');
-  console.log(cartHeader);
-  // cartHeader.innerText = "Panier d'achats";
-  
-  var shoppingLink = document.querySelector('[data-test="continue-shopping-link"]');
-  var shopUrl = 'https://philippe-courchesneleboeuf.squarespace.com/boutique';
-  shoppingLink.attributes.href = shopUrl;
-}
+var cartNameTranslate = () => {
+  if (location.pathname === "/cart") {
+    // document.querySelector('.CartHeader-cartTitle-9Dk3d.cart-title').innerText = "Panier d'achats";
+    console.log('cartHeader');
+    var cartHeader = document.querySelector('.CartHeader-cartTitle-9Dk3d.cart-title');
+    console.log(cartHeader);
+    // cartHeader.innerText = "Panier d'achats";
+    
+    var shoppingLink = document.querySelector('[data-test="continue-shopping-link"]');
+    var shopUrl = 'https://philippe-courchesneleboeuf.squarespace.com/boutique';
+    shoppingLink.attributes.href = shopUrl;
+  }
 
+};
+
+document.addEventListener("DOMContentLoaded", cartNameTranslate);
