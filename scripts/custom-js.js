@@ -48,5 +48,7 @@ var unScroll = () => { window.removeEventListener('scroll', renameBtns) };
 
 document.addEventListener("DOMContentLoaded", scroll);
 
-// <i class="fab fa-twitter"></i>
-// <i class="fab fa-instagram"></i>
+// Hide products section in product show page if less than 2 products available
+
+var availableProds = document.querySelector('.ProductList-grid.clear');
+if (availableProds.childNodes.length < 4) { availableProds.hidden = true };
