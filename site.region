@@ -183,7 +183,7 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
-    <squarespace:script src="custom-js.js" combo="false" />
+    <!-- <squarespace:script src="custom-js.js" combo="false" /> -->
 
     {squarespace-footers}
 
