@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", cartNameTranslate);
 
 var dropdownLink = document.querySelector('.Header-nav-item');
 var dropDownMenu = document.getElementById('dropUl');
+var dropdownItems = document.querySelectorAll('.dropLi');
 var h2s = document.querySelectorAll('h2');
 
 h2s.forEach((h2) => {
@@ -120,6 +121,9 @@ var dropDown = (event) => {
 if (location.pathname === '/') {
   document.addEventListener("click", closeDropDown, false);
   dropdownLink.addEventListener('click', dropDown, false);
+  dropdownItems.forEach((item) => {
+    item.addEventListener('click', closeDropDown);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", addClass);
