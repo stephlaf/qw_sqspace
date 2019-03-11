@@ -111,6 +111,17 @@
             <div data-nc-container="bottom-left">
               <nav class="Header-nav Header-nav--primary" data-nc-element="primary-nav" data-content-field="navigation">
                 <squarespace:navigation navigationId="mainNavigation" template="header-nav" />
+                <ul id="dropUl">
+                  <li class="dropLi">
+                    <a href="#spectacles">Spectacles</a>
+                  </li>
+                  <li class="dropLi">
+                    <a href="#groupe">Qui est QW4RTZ ?</a>
+                  </li>
+                  <li class="dropLi">
+                    <a href="#musique">Musique</a>
+                  </li>
+                </ul>
               </nav>
             </div>
             <div data-nc-container="bottom-center">

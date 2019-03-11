@@ -15,9 +15,6 @@ if (mainPage !== null) {
 
 var renameBtns = () => {
   var billetsBtns = document.querySelectorAll('.sqs-tourdates__button');
-  // var moreShowsBtn = document.querySelectorAll('.sqs-block-button-element--small.sqs-block-button-element')[1];
-
-  // moreShowsBtn.text = "Plus de Spectacles";
 
   billetsBtns.forEach((button, i) => { 
     if (i%2 === 0) {
@@ -85,3 +82,44 @@ var cartNameTranslate = () => {
 };
 
 document.addEventListener("DOMContentLoaded", cartNameTranslate);
+
+
+// Dropdown menu on Accueil link in navbar for main page only
+
+var dropdownLink = document.querySelector('.Header-nav-item');
+var dropDownMenu = document.getElementById('dropUl');
+var h2s = document.querySelectorAll('h2');
+
+h2s.forEach((h2) => {
+  if (h2.innerText === 'SPECTACLES') {
+    h2.parentElement.parentElement.parentElement.setAttribute("id", "spectacles");
+  } else if (h2.innerText.includes('QUI EST QW4RTZ ?')) {
+    h2.parentElement.parentElement.parentElement.setAttribute("id", "groupe");
+  } else if (h2.innerText === 'MUSIQUE') {
+    h2.parentElement.parentElement.parentElement.setAttribute("id", "musique");
+  }
+});
+
+var addClass = () => {
+  dropdownLink.classList.add('droplink');
+  dropDownMenu.classList.add('hideDrop');
+};
+
+var closeDropDown = () => {
+  if (!dropDownMenu.classList.contains('hideDrop')) {
+    dropDownMenu.classList.add('hideDrop');
+  }
+};
+
+var dropDown = (event) => {
+  event.preventDefault();
+  dropDownMenu.classList.toggle('hideDrop');
+  event.stopPropagation();
+};
+
+if (location.pathname === '/') {
+  document.addEventListener("click", closeDropDown, false);
+  dropdownLink.addEventListener('click', dropDown, false);
+}
+
+document.addEventListener("DOMContentLoaded", addClass);
