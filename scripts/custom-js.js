@@ -127,3 +127,15 @@ if (location.pathname === '/') {
 }
 
 document.addEventListener("DOMContentLoaded", addClass);
+
+// Add cart icon or link to mobile boutique page
+
+if (location.pathname === '/boutique') {
+  var mobileCartHtml = '<a href="/cart" id="mobile-cart">\
+  <span><i class="fas fa-shopping-cart"></i></span>\
+  </a>';
+
+  var cartDiv = document.getElementById('cart-div');
+  cartDiv.insertAdjacentHTML('afterbegin', mobileCartHtml);
+}
+
