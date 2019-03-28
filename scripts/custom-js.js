@@ -139,3 +139,7 @@ if (location.pathname === '/boutique') {
   cartDiv.insertAdjacentHTML('afterbegin', mobileCartHtml);
 }
 
+// Link Achetez vos billets button to Spectacles section in main page
+
+var ticketsButton = document.querySelector('.sqs-block-button-element--small')
+ticketsButton.setAttribute('href', '#spectacles')
